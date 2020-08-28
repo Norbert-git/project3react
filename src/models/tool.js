@@ -1,4 +1,4 @@
-const url = `http://localhost:3001`
+const url = `https://secure-waters-60575.herokuapp.com/ `
 
 class ToolModel {
   static all = () => {

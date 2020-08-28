@@ -1,9 +1,9 @@
-const REACT_APP_API_URL = "http://localhost:3001"
-
+// const REACT_APP_API_URL = "https://secure-waters-60575.herokuapp.com/"
+const url = `https://secure-waters-60575.herokuapp.com/ `
 export default class UserModel {
   static create(data) {
     console.log('we are in the create')
-    return fetch(`http://localhost:3001/auth/register`, {
+    return fetch(`${url}/auth/register`,  {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -13,7 +13,7 @@ export default class UserModel {
   }
   
   static login(credentials) {
-    return fetch(`${REACT_APP_API_URL}/auth/login`, {
+    return fetch(`${url}/auth/login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -24,7 +24,7 @@ export default class UserModel {
   }
 
   static logout() {
-    return fetch(`${REACT_APP_API_URL}/auth/logout`, {
+    return fetch(`${url}/auth/logout`, {
       method: "DELETE",
       credentials: 'include'
     })
